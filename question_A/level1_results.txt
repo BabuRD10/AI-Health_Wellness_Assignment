@@ -1,0 +1,51 @@
+Question A - Level 1 Results
+
+Dataset: Pima Indians Diabetes Dataset
+Number of rows: 768
+Number of features: 8
+Test size: 20%
+Random seed: 3012
+
+Logistic Regression:
+Accuracy: 74.68%
+Precision: 64.71%
+Recall: 61.11%
+
+Random Forest:
+Accuracy: 91.56%
+Precision: 88.68%
+Recall: 87.04%
+
+Level 2 - From-Scratch Logistic Regression
+
+Accuracy: 75.32%
+
+Confusion Matrix:
+True Negative: 83
+False Positive: 17
+False Negative: 21
+True Positive: 33
+
+Top 3 Feature Weights:
+Glucose: 0.8589
+Pregnancies: 0.6017
+SkinThickness: 0.4496
+
+Comparison:
+Sklearn Logistic Regression Accuracy: 74.68%
+From-Scratch Logistic Regression Accuracy: 75.32%
+Difference: 0.65 percentage points
+
+Level 3 - Threshold Experiment
+
+Selected Threshold: 0.21
+Training Recall: 90.19%
+
+Test Accuracy: 68.18%
+Test Precision: 52.75%
+Test Recall: 88.89%
+
+Observation:
+Lowering the classification threshold increased recall but reduced
+precision and accuracy. This shows why accuracy alone is not enough
+for evaluating a health screening model.
