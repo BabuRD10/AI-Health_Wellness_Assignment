@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Risk Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #ccc;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Diabetes Risk Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <div class="form-group">
+            <label>Pregnancies</label>
+            <input type="number" step="any" name="Pregnancies" required>
+        </div>
+
+        <div class="form-group">
+            <label>Glucose</label>
+            <input type="number" step="any" name="Glucose" required>
+        </div>
+
+        <div class="form-group">
+            <label>Blood Pressure</label>
+            <input type="number" step="any" name="BloodPressure" required>
+        </div>
+
+        <div class="form-group">
+            <label>Skin Thickness</label>
+            <input type="number" step="any" name="SkinThickness" required>
+        </div>
+
+        <div class="form-group">
+            <label>Insulin</label>
+            <input type="number" step="any" name="Insulin" required>
+        </div>
+
+        <div class="form-group">
+            <label>BMI</label>
+            <input type="number" step="any" name="BMI" required>
+        </div>
+
+        <div class="form-group">
+            <label>Diabetes Pedigree Function</label>
+            <input type="number" step="any" name="DiabetesPedigreeFunction" required>
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" step="any" name="Age" required>
+        </div>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    {% if result %}
+        <div class="result">
+            {{ result }}
+        </div>
+    {% endif %}
+
+    <div class="note">
+        <strong>Note:</strong>
+        This application is an academic demonstration of a machine-learning
+        model. It is not a medical diagnosis or medical advice.
+    </div>
+
+</body>
+</html>
